@@ -1,0 +1,276 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:2:1-34:12
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /home/hahimu/.gradle/caches/transforms-4/e99cf64c796605ed29954c93880e71dc/transformed/appcompat-resources-1.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat:1.7.0] /home/hahimu/.gradle/caches/transforms-4/1da6c758042ca03d1b7c2e9419154d3d/transformed/appcompat-1.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.fragment:fragment:1.5.4] /home/hahimu/.gradle/caches/transforms-4/d1b2322cf03b7e7d6bcf5e1ffa05fd4c/transformed/fragment-1.5.4/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.7.0] /home/hahimu/.gradle/caches/transforms-4/b022e1ff7c879769e67bdd3a27b4d501/transformed/activity-1.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/hahimu/.gradle/caches/transforms-4/50e5e0bc3acfcfb2e4d91cef343ae0fa/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /home/hahimu/.gradle/caches/transforms-4/a76386e603549603dd75f9a39887d593/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/hahimu/.gradle/caches/transforms-4/3b85377256684b33a58a373b37674409/transformed/emoji2-1.3.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.loader:loader:1.0.0] /home/hahimu/.gradle/caches/transforms-4/fb5b2ecf6e69dc742d13a10dc2b8ccb4/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /home/hahimu/.gradle/caches/transforms-4/f055e25e56cddfd101c0408269907b6c/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /home/hahimu/.gradle/caches/transforms-4/b8d30561df8f3a1129b98b4d5f935f3c/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/hahimu/.gradle/caches/transforms-4/4f9e76e56281c76984422e19398ce38a/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /home/hahimu/.gradle/caches/transforms-4/f55241c39847802d5474aa58f36edf2b/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /home/hahimu/.gradle/caches/transforms-4/244d6833adaf68bacd97ccf22383950d/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /home/hahimu/.gradle/caches/transforms-4/f9aa047d7722a9e6671596c26a6076d6/transformed/lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.13.0] /home/hahimu/.gradle/caches/transforms-4/af29f7c774486d5d321ff6477226c2dd/transformed/core-ktx-1.13.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/hahimu/.gradle/caches/transforms-4/3a1b5e9dab358c49201b208de549184c/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/hahimu/.gradle/caches/transforms-4/fcc72929abf7ab70d5bd488056277013/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/hahimu/.gradle/caches/transforms-4/50cb2606853dba48988d7895609596c9/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/hahimu/.gradle/caches/transforms-4/19d023f3a60eea4cf5eb1c532bab591d/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /home/hahimu/.gradle/caches/transforms-4/834f64c037d3eb1d80c9120d616e8ddf/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.13.0] /home/hahimu/.gradle/caches/transforms-4/7355ed258ff004f1f7a52a25b39730a1/transformed/core-1.13.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/hahimu/.gradle/caches/transforms-4/50cee7bea3b7216f9454a162ed58ac2e/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/hahimu/.gradle/caches/transforms-4/9073134a8279528934d3b9f3606d7f26/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /home/hahimu/.gradle/caches/transforms-4/8461ace65c8d587a67b3fc39f79bf241/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/hahimu/.gradle/caches/transforms-4/8b812f897cbfdb95ce6a244d65e73375/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/hahimu/.gradle/caches/transforms-4/06899ad34059219eddc5e1f866c33acb/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/hahimu/.gradle/caches/transforms-4/91f69ae0b6602f583ef334e07bc064ad/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /home/hahimu/.gradle/caches/transforms-4/b9d2b11e90a840ceb88cefaa084dd6f6/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:2:1-7:12
+	package
+		INJECTED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:4:22-64
+uses-permission#android.permission.CAMERA
+ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:5:5-65
+	android:name
+		ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:5:22-62
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:6:5-107
+	android:maxSdkVersion
+		ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:6:78-104
+	android:name
+		ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:6:22-77
+uses-feature#android.hardware.camera
+ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:7:5-85
+	android:required
+		ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:7:58-82
+	android:name
+		ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:7:19-57
+application
+ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:9:5-32:19
+INJECTED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:9:5-32:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/hahimu/.gradle/caches/transforms-4/3b85377256684b33a58a373b37674409/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/hahimu/.gradle/caches/transforms-4/3b85377256684b33a58a373b37674409/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/hahimu/.gradle/caches/transforms-4/4f9e76e56281c76984422e19398ce38a/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/hahimu/.gradle/caches/transforms-4/4f9e76e56281c76984422e19398ce38a/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.13.0] /home/hahimu/.gradle/caches/transforms-4/7355ed258ff004f1f7a52a25b39730a1/transformed/core-1.13.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.13.0] /home/hahimu/.gradle/caches/transforms-4/7355ed258ff004f1f7a52a25b39730a1/transformed/core-1.13.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/hahimu/.gradle/caches/transforms-4/9073134a8279528934d3b9f3606d7f26/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/hahimu/.gradle/caches/transforms-4/9073134a8279528934d3b9f3606d7f26/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/hahimu/.gradle/caches/transforms-4/06899ad34059219eddc5e1f866c33acb/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/hahimu/.gradle/caches/transforms-4/06899ad34059219eddc5e1f866c33acb/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+	android:extractNativeLibs
+		INJECTED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.13.0] /home/hahimu/.gradle/caches/transforms-4/7355ed258ff004f1f7a52a25b39730a1/transformed/core-1.13.0/AndroidManifest.xml:28:18-86
+	android:label
+		ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:13:9-41
+	android:roundIcon
+		ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:12:9-54
+	android:icon
+		ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:11:9-43
+	android:allowBackup
+		ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:10:9-35
+	android:theme
+		ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:14:9-40
+	android:usesCleartextTraffic
+		ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:15:9-45
+activity#com.theoxygen.admin.SplashActivity
+ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:17:9-25:20
+	android:exported
+		ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:19:13-36
+	android:theme
+		ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:20:13-47
+	android:name
+		ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:18:13-43
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:21:13-24:29
+action#android.intent.action.MAIN
+ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:22:17-69
+	android:name
+		ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:22:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:23:17-77
+	android:name
+		ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:23:27-74
+activity#com.theoxygen.admin.MainActivity
+ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:27:9-30:77
+	android:exported
+		ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:29:13-37
+	android:configChanges
+		ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:30:13-74
+	android:name
+		ADDED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml:28:13-41
+uses-sdk
+INJECTED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml
+INJECTED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /home/hahimu/.gradle/caches/transforms-4/e99cf64c796605ed29954c93880e71dc/transformed/appcompat-resources-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /home/hahimu/.gradle/caches/transforms-4/e99cf64c796605ed29954c93880e71dc/transformed/appcompat-resources-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.0] /home/hahimu/.gradle/caches/transforms-4/1da6c758042ca03d1b7c2e9419154d3d/transformed/appcompat-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.0] /home/hahimu/.gradle/caches/transforms-4/1da6c758042ca03d1b7c2e9419154d3d/transformed/appcompat-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment:1.5.4] /home/hahimu/.gradle/caches/transforms-4/d1b2322cf03b7e7d6bcf5e1ffa05fd4c/transformed/fragment-1.5.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.4] /home/hahimu/.gradle/caches/transforms-4/d1b2322cf03b7e7d6bcf5e1ffa05fd4c/transformed/fragment-1.5.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.7.0] /home/hahimu/.gradle/caches/transforms-4/b022e1ff7c879769e67bdd3a27b4d501/transformed/activity-1.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.7.0] /home/hahimu/.gradle/caches/transforms-4/b022e1ff7c879769e67bdd3a27b4d501/transformed/activity-1.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/hahimu/.gradle/caches/transforms-4/50e5e0bc3acfcfb2e4d91cef343ae0fa/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/hahimu/.gradle/caches/transforms-4/50e5e0bc3acfcfb2e4d91cef343ae0fa/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /home/hahimu/.gradle/caches/transforms-4/a76386e603549603dd75f9a39887d593/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /home/hahimu/.gradle/caches/transforms-4/a76386e603549603dd75f9a39887d593/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/hahimu/.gradle/caches/transforms-4/3b85377256684b33a58a373b37674409/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/hahimu/.gradle/caches/transforms-4/3b85377256684b33a58a373b37674409/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/hahimu/.gradle/caches/transforms-4/fb5b2ecf6e69dc742d13a10dc2b8ccb4/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/hahimu/.gradle/caches/transforms-4/fb5b2ecf6e69dc742d13a10dc2b8ccb4/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /home/hahimu/.gradle/caches/transforms-4/f055e25e56cddfd101c0408269907b6c/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /home/hahimu/.gradle/caches/transforms-4/f055e25e56cddfd101c0408269907b6c/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /home/hahimu/.gradle/caches/transforms-4/b8d30561df8f3a1129b98b4d5f935f3c/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /home/hahimu/.gradle/caches/transforms-4/b8d30561df8f3a1129b98b4d5f935f3c/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/hahimu/.gradle/caches/transforms-4/4f9e76e56281c76984422e19398ce38a/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/hahimu/.gradle/caches/transforms-4/4f9e76e56281c76984422e19398ce38a/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /home/hahimu/.gradle/caches/transforms-4/f55241c39847802d5474aa58f36edf2b/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /home/hahimu/.gradle/caches/transforms-4/f55241c39847802d5474aa58f36edf2b/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /home/hahimu/.gradle/caches/transforms-4/244d6833adaf68bacd97ccf22383950d/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /home/hahimu/.gradle/caches/transforms-4/244d6833adaf68bacd97ccf22383950d/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /home/hahimu/.gradle/caches/transforms-4/f9aa047d7722a9e6671596c26a6076d6/transformed/lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /home/hahimu/.gradle/caches/transforms-4/f9aa047d7722a9e6671596c26a6076d6/transformed/lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.13.0] /home/hahimu/.gradle/caches/transforms-4/af29f7c774486d5d321ff6477226c2dd/transformed/core-ktx-1.13.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.13.0] /home/hahimu/.gradle/caches/transforms-4/af29f7c774486d5d321ff6477226c2dd/transformed/core-ktx-1.13.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/hahimu/.gradle/caches/transforms-4/3a1b5e9dab358c49201b208de549184c/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/hahimu/.gradle/caches/transforms-4/3a1b5e9dab358c49201b208de549184c/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/hahimu/.gradle/caches/transforms-4/fcc72929abf7ab70d5bd488056277013/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/hahimu/.gradle/caches/transforms-4/fcc72929abf7ab70d5bd488056277013/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/hahimu/.gradle/caches/transforms-4/50cb2606853dba48988d7895609596c9/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/hahimu/.gradle/caches/transforms-4/50cb2606853dba48988d7895609596c9/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/hahimu/.gradle/caches/transforms-4/19d023f3a60eea4cf5eb1c532bab591d/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/hahimu/.gradle/caches/transforms-4/19d023f3a60eea4cf5eb1c532bab591d/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/hahimu/.gradle/caches/transforms-4/834f64c037d3eb1d80c9120d616e8ddf/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/hahimu/.gradle/caches/transforms-4/834f64c037d3eb1d80c9120d616e8ddf/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.0] /home/hahimu/.gradle/caches/transforms-4/7355ed258ff004f1f7a52a25b39730a1/transformed/core-1.13.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.0] /home/hahimu/.gradle/caches/transforms-4/7355ed258ff004f1f7a52a25b39730a1/transformed/core-1.13.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/hahimu/.gradle/caches/transforms-4/50cee7bea3b7216f9454a162ed58ac2e/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/hahimu/.gradle/caches/transforms-4/50cee7bea3b7216f9454a162ed58ac2e/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/hahimu/.gradle/caches/transforms-4/9073134a8279528934d3b9f3606d7f26/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/hahimu/.gradle/caches/transforms-4/9073134a8279528934d3b9f3606d7f26/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/hahimu/.gradle/caches/transforms-4/8461ace65c8d587a67b3fc39f79bf241/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/hahimu/.gradle/caches/transforms-4/8461ace65c8d587a67b3fc39f79bf241/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/hahimu/.gradle/caches/transforms-4/8b812f897cbfdb95ce6a244d65e73375/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/hahimu/.gradle/caches/transforms-4/8b812f897cbfdb95ce6a244d65e73375/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/hahimu/.gradle/caches/transforms-4/06899ad34059219eddc5e1f866c33acb/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/hahimu/.gradle/caches/transforms-4/06899ad34059219eddc5e1f866c33acb/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/hahimu/.gradle/caches/transforms-4/91f69ae0b6602f583ef334e07bc064ad/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/hahimu/.gradle/caches/transforms-4/91f69ae0b6602f583ef334e07bc064ad/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /home/hahimu/.gradle/caches/transforms-4/b9d2b11e90a840ceb88cefaa084dd6f6/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /home/hahimu/.gradle/caches/transforms-4/b9d2b11e90a840ceb88cefaa084dd6f6/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
+	android:targetSdkVersion
+		INJECTED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/hahimu/the oxygen/project-root/admin-app/app/src/main/AndroidManifest.xml
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.3.0] /home/hahimu/.gradle/caches/transforms-4/3b85377256684b33a58a373b37674409/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/hahimu/.gradle/caches/transforms-4/4f9e76e56281c76984422e19398ce38a/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/hahimu/.gradle/caches/transforms-4/4f9e76e56281c76984422e19398ce38a/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/hahimu/.gradle/caches/transforms-4/9073134a8279528934d3b9f3606d7f26/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/hahimu/.gradle/caches/transforms-4/9073134a8279528934d3b9f3606d7f26/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/hahimu/.gradle/caches/transforms-4/3b85377256684b33a58a373b37674409/transformed/emoji2-1.3.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/hahimu/.gradle/caches/transforms-4/3b85377256684b33a58a373b37674409/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/hahimu/.gradle/caches/transforms-4/3b85377256684b33a58a373b37674409/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/hahimu/.gradle/caches/transforms-4/3b85377256684b33a58a373b37674409/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] /home/hahimu/.gradle/caches/transforms-4/3b85377256684b33a58a373b37674409/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/hahimu/.gradle/caches/transforms-4/3b85377256684b33a58a373b37674409/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/hahimu/.gradle/caches/transforms-4/3b85377256684b33a58a373b37674409/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/hahimu/.gradle/caches/transforms-4/4f9e76e56281c76984422e19398ce38a/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/hahimu/.gradle/caches/transforms-4/4f9e76e56281c76984422e19398ce38a/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/hahimu/.gradle/caches/transforms-4/4f9e76e56281c76984422e19398ce38a/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] /home/hahimu/.gradle/caches/transforms-4/7355ed258ff004f1f7a52a25b39730a1/transformed/core-1.13.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.0] /home/hahimu/.gradle/caches/transforms-4/7355ed258ff004f1f7a52a25b39730a1/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.0] /home/hahimu/.gradle/caches/transforms-4/7355ed258ff004f1f7a52a25b39730a1/transformed/core-1.13.0/AndroidManifest.xml:23:9-81
+permission#com.theoxygen.admin.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] /home/hahimu/.gradle/caches/transforms-4/7355ed258ff004f1f7a52a25b39730a1/transformed/core-1.13.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.0] /home/hahimu/.gradle/caches/transforms-4/7355ed258ff004f1f7a52a25b39730a1/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.0] /home/hahimu/.gradle/caches/transforms-4/7355ed258ff004f1f7a52a25b39730a1/transformed/core-1.13.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] /home/hahimu/.gradle/caches/transforms-4/7355ed258ff004f1f7a52a25b39730a1/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.0] /home/hahimu/.gradle/caches/transforms-4/7355ed258ff004f1f7a52a25b39730a1/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
+uses-permission#com.theoxygen.admin.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] /home/hahimu/.gradle/caches/transforms-4/7355ed258ff004f1f7a52a25b39730a1/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.0] /home/hahimu/.gradle/caches/transforms-4/7355ed258ff004f1f7a52a25b39730a1/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/hahimu/.gradle/caches/transforms-4/e1c4cffcb44a651b13fe2cdd3f11f745/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92

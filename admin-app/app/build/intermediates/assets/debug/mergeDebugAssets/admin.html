@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Oxygen — Admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F6F1E4; --deep:#1F3D2B; --leaf:#5B8C51; --leaf-dark:#3F6B3A;
+    --soil:#8B5E3C; --gold:#C9A227; --ink:#2B2A25; --card:#FFFDF7; --line:#DCD3BC;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Hind Siliguri',sans-serif;padding-bottom:40px;}
+  h1,h2,h3{font-family:'Tiro Bangla',serif;}
+  .topbar{background:var(--deep);color:var(--bg);padding:16px;}
+  .topbar h1{font-size:20px;margin:0;}
+  .brand-badge{
+    position:fixed; right:10px; bottom:8px; z-index:99;
+    font-size:10px; color:#7d7a6c; background:rgba(255,253,247,.85);
+    padding:3px 8px; border-radius:10px; pointer-events:none;
+  }
+  .container{max-width:700px;margin:0 auto;padding:16px;}
+
+  /* login */
+  .lock-box{max-width:340px;margin:60px auto;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;text-align:center;}
+  .lock-box input{width:100%;padding:11px;margin:12px 0;border-radius:8px;border:1px solid var(--line);font-size:15px;}
+  .err{color:#B5533C;font-size:13px;min-height:18px;}
+  .btn{background:var(--leaf);color:#fff;border:none;padding:11px 18px;border-radius:9px;font-family:'Hind Siliguri',sans-serif;font-size:15px;font-weight:600;cursor:pointer;}
+  .btn:hover{background:var(--leaf-dark);}
+  .btn.full{width:100%;}
+  .btn.danger{background:#B5533C;}
+  .btn.ghost{background:transparent;color:var(--deep);border:1px solid var(--line);}
+  .btn.gold{background:var(--gold);color:var(--deep);}
+
+  /* tabs */
+  .tabs{display:flex;gap:6px;margin-bottom:16px;overflow-x:auto;}
+  .tab-btn{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 14px;border-radius:20px;font-size:13.5px;cursor:pointer;white-space:nowrap;}
+  .tab-btn.active{background:var(--deep);color:var(--bg);border-color:var(--deep);}
+
+  .panel{display:none;}
+  .panel.active{display:block;}
+
+  .form-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:20px;}
+  .field{margin-bottom:12px;}
+  .field label{display:block;font-size:13px;color:var(--soil);margin-bottom:5px;}
+  .field input, .field textarea, .field select{width:100%;padding:10px 12px;border-radius:8px;border:1px solid var(--line);font-family:'Hind Siliguri',sans-serif;font-size:15px;background:#fffef9;}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .photo-preview{width:80px;height:80px;border-radius:10px;object-fit:cover;margin-top:8px;border:1px solid var(--line);}
+
+  .item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px;display:flex;gap:12px;align-items:flex-start;}
+  .item img{width:56px;height:56px;border-radius:8px;object-fit:cover;flex-shrink:0;background:#e6e0cf;}
+  .item .ph{width:56px;height:56px;border-radius:8px;flex-shrink:0;background:#e6e0cf;display:flex;align-items:center;justify-content:center;font-size:22px;}
+  .item .info{flex:1;min-width:0;}
+  .item .n{font-weight:600;color:var(--deep);}
+  .item .a{font-size:12.5px;color:var(--soil);margin-top:2px;}
+  .item .a b{color:var(--ink);}
+  .badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-top:4px;}
+  .badge.pending{background:#F2D9A6;color:#7A5A12;}
+  .badge.confirmed{background:#CDE3C4;color:#2D5A20;}
+  .actions{display:flex;flex-direction:column;gap:6px;}
+  .actions button{border:none;background:var(--bg);border-radius:7px;padding:6px 10px;font-size:12.5px;cursor:pointer;}
+  .empty{text-align:center;padding:30px;color:var(--soil);font-size:14px;}
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--deep);color:var(--bg);padding:10px 20px;border-radius:20px;font-size:14px;z-index:100;opacity:0;transition:.25s;}
+  .toast.show{opacity:1;}
+  .logout-link{font-size:12px;color:var(--bg);opacity:.75;text-decoration:underline;cursor:pointer;}
+</style>
+</head>
+<body>
+
+<div class="brand-badge">Built by HA TECH BD</div>
+
+<!-- LOGIN -->
+<div id="loginView">
+  <div class="lock-box">
+    <h3>The Oxygen — Admin</h3>
+    <p style="font-size:13px;color:var(--soil);">এডমিন পাসকোড দিন</p>
+    <input type="password" id="passInput" placeholder="পাসকোড">
+    <div class="err" id="loginErr"></div>
+    <button class="btn full" onclick="login()">প্রবেশ করুন</button>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="adminView" style="display:none;">
+  <div class="topbar" style="display:flex;justify-content:space-between;align-items:center;">
+    <h1>The Oxygen — Admin</h1>
+    <span class="logout-link" onclick="logout()">লগআউট</span>
+  </div>
+  <div class="container">
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('trees')">রোপিত গাছ</button>
+      <button class="tab-btn" onclick="switchTab('upcoming')">শীঘ্রই লাগবে</button>
+      <button class="tab-btn" onclick="switchTab('donations')">অনুদান</button>
+    </div>
+
+    <!-- TREES -->
+    <div class="panel active" id="panel-trees">
+      <div class="form-card">
+        <h3 id="treeFormTitle">নতুন গাছ যোগ করুন</h3>
+        <div class="field"><label>নাম *</label><input id="tName"></div>
+        <div class="row2">
+          <div class="field"><label>মোবাইল নম্বর</label><input id="tPhone"></div>
+          <div class="field"><label>গাছের প্রজাতি</label><input id="tSpecies"></div>
+        </div>
+        <div class="field"><label>ঠিকানা</label><textarea id="tAddress" rows="2"></textarea></div>
+        <div class="row2">
+          <div class="field"><label>রোপণের তারিখ</label><input type="date" id="tDate"></div>
+          <div class="field"><label>ছবি</label><input type="file" accept="image/*" id="tPhotoFile" onchange="handlePhoto(event,'tree')"></div>
+        </div>
+        <img id="tPhotoPreview" class="photo-preview" style="display:none;">
+        <div class="err" id="tErr"></div>
+        <div style="display:flex;gap:10px;margin-top:8px;">
+          <button class="btn" onclick="saveTree()">সংরক্ষণ করুন</button>
+          <button class="btn ghost" id="tCancelBtn" style="display:none;" onclick="resetTreeForm()">বাতিল</button>
+        </div>
+      </div>
+      <div id="treesList"></div>
+    </div>
+
+    <!-- UPCOMING -->
+    <div class="panel" id="panel-upcoming">
+      <div class="form-card">
+        <h3 id="upFormTitle">নতুন এন্ট্রি (শীঘ্রই লাগবে)</h3>
+        <div class="field"><label>নাম *</label><input id="uName"></div>
+        <div class="row2">
+          <div class="field"><label>মোবাইল নম্বর</label><input id="uPhone"></div>
+          <div class="field"><label>সম্ভাব্য তারিখ</label><input type="date" id="uDate"></div>
+        </div>
+        <div class="field"><label>ঠিকানা</label><textarea id="uAddress" rows="2"></textarea></div>
+        <div class="field"><label>নোট</label><input id="uNote" placeholder="ঐচ্ছিক"></div>
+        <div class="err" id="uErr"></div>
+        <div style="display:flex;gap:10px;margin-top:8px;">
+          <button class="btn" onclick="saveUpcoming()">সংরক্ষণ করুন</button>
+          <button class="btn ghost" id="uCancelBtn" style="display:none;" onclick="resetUpcomingForm()">বাতিল</button>
+        </div>
+      </div>
+      <div id="upcomingList"></div>
+    </div>
+
+    <!-- DONATIONS -->
+    <div class="panel" id="panel-donations">
+      <h3>অপেক্ষমাণ অনুদান</h3>
+      <div id="donationsPending"></div>
+      <h3 style="margin-top:24px;">কনফার্ম করা অনুদান</h3>
+      <div id="donationsConfirmed"></div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage-compat.js"></script>
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyD5hquYScJ-mrUJdg8aBXxho6d1lqagS2A",
+  authDomain: "the-oxygen.firebaseapp.com",
+  databaseURL: "https://the-oxygen-default-rtdb.firebaseio.com",
+  projectId: "the-oxygen",
+  storageBucket: "the-oxygen.firebasestorage.app",
+  messagingSenderId: "91885766476",
+  appId: "1:91885766476:web:d00c145fe7d3252bcf31e9"
+};
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const db = firebase.database();
+const storage = firebase.storage();
+const ADMIN_EMAIL = "admin@theoxygen.app";
+
+let editingTreeId = null;
+let editingUpId = null;
+let pendingPhoto = { tree: null };
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 2200);
+}
+function escapeHtml(str){ const d=document.createElement('div'); d.textContent=str||''; return d.innerHTML; }
+
+function login(){
+  const pass = document.getElementById('passInput').value;
+  if(!pass){ document.getElementById('loginErr').textContent='পাসকোড দিন'; return; }
+  auth.signInWithEmailAndPassword(ADMIN_EMAIL, pass)
+    .catch(err => { document.getElementById('loginErr').textContent = 'পাসকোড সঠিক নয়'; });
+}
+function logout(){ auth.signOut(); }
+
+auth.onAuthStateChanged(user => {
+  if(user){
+    document.getElementById('loginView').style.display='none';
+    document.getElementById('adminView').style.display='block';
+    listenTrees(); listenUpcoming(); listenDonations();
+  } else {
+    document.getElementById('loginView').style.display='block';
+    document.getElementById('adminView').style.display='none';
+  }
+});
+
+function switchTab(tab){
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  event.target.classList.add('active');
+  document.getElementById('panel-'+tab).classList.add('active');
+}
+
+function handlePhoto(e, kind){
+  const file = e.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    const img = new Image();
+    img.onload = () => {
+      const maxW = 700;
+      const scale = Math.min(1, maxW/img.width);
+      const canvas = document.createElement('canvas');
+      canvas.width = img.width*scale; canvas.height = img.height*scale;
+      canvas.getContext('2d').drawImage(img,0,0,canvas.width,canvas.height);
+      canvas.toBlob(blob => {
+        pendingPhoto[kind] = blob;
+        const preview = document.getElementById('tPhotoPreview');
+        preview.src = canvas.toDataURL('image/jpeg',0.75);
+        preview.style.display = 'block';
+      }, 'image/jpeg', 0.75);
+    };
+    img.src = ev.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+async function uploadPhoto(blob, path){
+  const ref = storage.ref().child(path);
+  await ref.put(blob);
+  return await ref.getDownloadURL();
+}
+
+/* ---------- TREES ---------- */
+function listenTrees(){
+  db.ref('trees').on('value', snap => {
+    const data = snap.val() || {};
+    const list = Object.entries(data).sort((a,b)=> (b[1].createdAt||0)-(a[1].createdAt||0));
+    const wrap = document.getElementById('treesList');
+    if(list.length===0){ wrap.innerHTML='<div class="empty">কোনো এন্ট্রি নেই</div>'; return; }
+    wrap.innerHTML = list.map(([id,r])=>`
+      <div class="item">
+        ${r.photoUrl ? `<img src="${r.photoUrl}">` : `<div class="ph">🌳</div>`}
+        <div class="info">
+          <div class="n">${escapeHtml(r.name)}</div>
+          <div class="a">${escapeHtml(r.address||'')}${r.phone?' · '+escapeHtml(r.phone):''}</div>
+          <div class="a">${escapeHtml(r.species||'')} ${r.date?'· '+escapeHtml(r.date):''}</div>
+        </div>
+        <div class="actions">
+          <button onclick="editTree('${id}')">সম্পাদনা</button>
+          <button onclick="deleteTree('${id}')" style="color:#B5533C;">মুছুন</button>
+        </div>
+      </div>`).join('');
+  });
+}
+function resetTreeForm(){
+  editingTreeId=null; pendingPhoto.tree=null;
+  ['tName','tPhone','tSpecies','tAddress','tDate'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('tPhotoFile').value='';
+  document.getElementById('tPhotoPreview').style.display='none';
+  document.getElementById('treeFormTitle').textContent='নতুন গাছ যোগ করুন';
+  document.getElementById('tCancelBtn').style.display='none';
+  document.getElementById('tErr').textContent='';
+}
+async function saveTree(){
+  const name = document.getElementById('tName').value.trim();
+  if(!name){ document.getElementById('tErr').textContent='নাম আবশ্যক'; return; }
+  let photoUrl = null;
+  try{
+    if(pendingPhoto.tree){
+      photoUrl = await uploadPhoto(pendingPhoto.tree, 'trees/'+Date.now()+'.jpg');
+    } else if(editingTreeId){
+      const snap = await db.ref('trees/'+editingTreeId).get();
+      photoUrl = snap.exists() ? (snap.val().photoUrl||null) : null;
+    }
+  }catch(e){ document.getElementById('tErr').textContent='ছবি আপলোডে সমস্যা হয়েছে'; return; }
+
+  const entry = {
+    name,
+    phone: document.getElementById('tPhone').value.trim(),
+    species: document.getElementById('tSpecies').value.trim(),
+    address: document.getElementById('tAddress').value.trim(),
+    date: document.getElementById('tDate').value,
+    photoUrl,
+    createdAt: Date.now()
+  };
+  const id = editingTreeId || db.ref('trees').push().key;
+  await db.ref('trees/'+id).set(entry);
+  showToast(editingTreeId?'হালনাগাদ হয়েছে':'নতুন গাছ যোগ হয়েছে');
+  resetTreeForm();
+}
+async function editTree(id){
+  const snap = await db.ref('trees/'+id).get();
+  if(!snap.exists()) return;
+  const r = snap.val();
+  editingTreeId = id;
+  document.getElementById('tName').value=r.name||'';
+  document.getElementById('tPhone').value=r.phone||'';
+  document.getElementById('tSpecies').value=r.species||'';
+  document.getElementById('tAddress').value=r.address||'';
+  document.getElementById('tDate').value=r.date||'';
+  const preview=document.getElementById('tPhotoPreview');
+  if(r.photoUrl){ preview.src=r.photoUrl; preview.style.display='block'; } else { preview.style.display='none'; }
+  document.getElementById('treeFormTitle').textContent='গাছের তথ্য সম্পাদনা';
+  document.getElementById('tCancelBtn').style.display='inline-block';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+async function deleteTree(id){
+  if(!confirm('মুছে ফেলতে চান?')) return;
+  await db.ref('trees/'+id).remove();
+  showToast('মুছে ফেলা হয়েছে');
+}
+
+/* ---------- UPCOMING ---------- */
+function listenUpcoming(){
+  db.ref('upcoming').on('value', snap => {
+    const data = snap.val() || {};
+    const list = Object.entries(data).sort((a,b)=> (b[1].createdAt||0)-(a[1].createdAt||0));
+    const wrap = document.getElementById('upcomingList');
+    if(list.length===0){ wrap.innerHTML='<div class="empty">কোনো এন্ট্রি নেই</div>'; return; }
+    wrap.innerHTML = list.map(([id,r])=>`
+      <div class="item">
+        <div class="ph">⏳</div>
+        <div class="info">
+          <div class="n">${escapeHtml(r.name)}</div>
+          <div class="a">${escapeHtml(r.address||'')}${r.phone?' · '+escapeHtml(r.phone):''}</div>
+          <div class="a">${r.plannedDate?'তারিখ: '+escapeHtml(r.plannedDate):''} ${r.note?'· '+escapeHtml(r.note):''}</div>
+        </div>
+        <div class="actions">
+          <button onclick="editUpcoming('${id}')">সম্পাদনা</button>
+          <button onclick="moveToTrees('${id}')" style="color:var(--leaf-dark);">রোপিত হয়েছে</button>
+          <button onclick="deleteUpcoming('${id}')" style="color:#B5533C;">মুছুন</button>
+        </div>
+      </div>`).join('');
+  });
+}
+function resetUpcomingForm(){
+  editingUpId=null;
+  ['uName','uPhone','uDate','uAddress','uNote'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('upFormTitle').textContent='নতুন এন্ট্রি (শীঘ্রই লাগবে)';
+  document.getElementById('uCancelBtn').style.display='none';
+  document.getElementById('uErr').textContent='';
+}
+async function saveUpcoming(){
+  const name = document.getElementById('uName').value.trim();
+  if(!name){ document.getElementById('uErr').textContent='নাম আবশ্যক'; return; }
+  const entry = {
+    name,
+    phone: document.getElementById('uPhone').value.trim(),
+    plannedDate: document.getElementById('uDate').value,
+    address: document.getElementById('uAddress').value.trim(),
+    note: document.getElementById('uNote').value.trim(),
+    createdAt: Date.now()
+  };
+  const id = editingUpId || db.ref('upcoming').push().key;
+  await db.ref('upcoming/'+id).set(entry);
+  showToast(editingUpId?'হালনাগাদ হয়েছে':'যোগ হয়েছে');
+  resetUpcomingForm();
+}
+async function editUpcoming(id){
+  const snap = await db.ref('upcoming/'+id).get();
+  if(!snap.exists()) return;
+  const r = snap.val();
+  editingUpId = id;
+  document.getElementById('uName').value=r.name||'';
+  document.getElementById('uPhone').value=r.phone||'';
+  document.getElementById('uDate').value=r.plannedDate||'';
+  document.getElementById('uAddress').value=r.address||'';
+  document.getElementById('uNote').value=r.note||'';
+  document.getElementById('upFormTitle').textContent='এন্ট্রি সম্পাদনা';
+  document.getElementById('uCancelBtn').style.display='inline-block';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+async function deleteUpcoming(id){
+  if(!confirm('মুছে ফেলতে চান?')) return;
+  await db.ref('upcoming/'+id).remove();
+  showToast('মুছে ফেলা হয়েছে');
+}
+async function moveToTrees(id){
+  const snap = await db.ref('upcoming/'+id).get();
+  if(!snap.exists()) return;
+  const r = snap.val();
+  const newId = db.ref('trees').push().key;
+  await db.ref('trees/'+newId).set({
+    name: r.name, phone: r.phone||'', address: r.address||'',
+    species: '', date: new Date().toISOString().slice(0,10),
+    photoUrl: null, createdAt: Date.now()
+  });
+  await db.ref('upcoming/'+id).remove();
+  showToast('"রোপিত গাছ" তালিকায় সরানো হয়েছে — ছবি যোগ করতে এডিট করুন');
+  switchTabProgrammatic('trees');
+}
+function switchTabProgrammatic(tab){
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById('panel-'+tab).classList.add('active');
+}
+
+/* ---------- DONATIONS ---------- */
+function listenDonations(){
+  db.ref('donations').on('value', snap => {
+    const data = snap.val() || {};
+    const entries = Object.entries(data).sort((a,b)=> (b[1].createdAt||0)-(a[1].createdAt||0));
+    const pending = entries.filter(([,r])=> (r.status||'pending')==='pending');
+    const confirmed = entries.filter(([,r])=> r.status==='confirmed');
+
+    const pWrap = document.getElementById('donationsPending');
+    pWrap.innerHTML = pending.length===0 ? '<div class="empty">কোনো অপেক্ষমাণ অনুদান নেই</div>' :
+      pending.map(([id,r])=>`
+        <div class="item">
+          <div class="ph">💚</div>
+          <div class="info">
+            <div class="n">${escapeHtml(r.donorName)}</div>
+            <div class="a">ট্রানজেকশন: <b>${escapeHtml(r.transactionId)}</b></div>
+            <div class="a">${escapeHtml(r.method||'')} · ${escapeHtml(r.phone||'')}</div>
+            <span class="badge pending">অপেক্ষমাণ</span>
+          </div>
+          <div class="actions">
+            <button onclick="confirmDonation('${id}')" style="color:var(--leaf-dark);">কনফার্ম</button>
+            <button onclick="deleteDonation('${id}')" style="color:#B5533C;">রিজেক্ট</button>
+          </div>
+        </div>`).join('');
+
+    const cWrap = document.getElementById('donationsConfirmed');
+    cWrap.innerHTML = confirmed.length===0 ? '<div class="empty">এখনো কিছু কনফার্ম হয়নি</div>' :
+      confirmed.map(([id,r])=>`
+        <div class="item">
+          <div class="ph">✅</div>
+          <div class="info">
+            <div class="n">${escapeHtml(r.donorName)}</div>
+            <div class="a">ট্রানজেকশন: <b>${escapeHtml(r.transactionId)}</b></div>
+            <span class="badge confirmed">কনফার্ম হয়েছে</span>
+          </div>
+          <div class="actions">
+            <button onclick="deleteDonation('${id}')" style="color:#B5533C;">মুছুন</button>
+          </div>
+        </div>`).join('');
+  });
+}
+async function confirmDonation(id){
+  await db.ref('donations/'+id+'/status').set('confirmed');
+  showToast('কনফার্ম করা হয়েছে — দাতাকে মেসেজ পাঠাতে ভুলবেন না');
+}
+async function deleteDonation(id){
+  if(!confirm('মুছে ফেলতে চান?')) return;
+  await db.ref('donations/'+id).remove();
+}
+</script>
+</body>
+</html>

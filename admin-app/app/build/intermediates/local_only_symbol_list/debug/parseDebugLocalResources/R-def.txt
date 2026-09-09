@@ -1,0 +1,15 @@
+R_DEF: Internal format may change without notice
+local
+color brand_green
+color splash_bg
+drawable hatech_logo
+drawable splash_logo
+id splashLogo
+id webView
+layout activity_main
+layout activity_splash
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style AppTheme
+style SplashTheme
