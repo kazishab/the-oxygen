@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Oxygen — বৃক্ষ রোপণ কর্মসূচি</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7392235471119925" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -115,16 +116,16 @@
     <div class="donate-card">
       <h3 style="margin-top:0;">গাছ লাগাতে অনুদান দিন</h3>
       <p style="font-size:14px;color:var(--soil);">নিচের নম্বরে bKash/Nagad-এ টাকা পাঠিয়ে ফর্মটি পূরণ করুন। আমরা যাচাই করে আপনাকে মেসেজে কনফার্ম করবো।</p>
-      <div class="pay-info">
+      <div class="pay-info" id="payInfo">
         <div class="pay-box">
           <div class="m">bKash</div>
-          <div class="num">01XXXXXXXXX</div>
-          <div class="type">Personal — এখানে আসল নম্বর বসান</div>
+          <div class="num" id="bkashNum">লোড হচ্ছে...</div>
+          <div class="type" id="bkashType"></div>
         </div>
         <div class="pay-box">
           <div class="m">Nagad</div>
-          <div class="num">01XXXXXXXXX</div>
-          <div class="type">Personal — এখানে আসল নম্বর বসান</div>
+          <div class="num" id="nagadNum">লোড হচ্ছে...</div>
+          <div class="type" id="nagadType"></div>
         </div>
       </div>
 
@@ -198,6 +199,14 @@ function renderTrees(){
       </div>
     </div>`).join('');
 }
+
+db.ref('settings/payment').on('value', snap => {
+  const s = snap.val() || {};
+  document.getElementById('bkashNum').textContent = (s.bkash && s.bkash.number) || 'শীঘ্রই যোগ হবে';
+  document.getElementById('bkashType').textContent = (s.bkash && s.bkash.type) || '';
+  document.getElementById('nagadNum').textContent = (s.nagad && s.nagad.number) || 'শীঘ্রই যোগ হবে';
+  document.getElementById('nagadType').textContent = (s.nagad && s.nagad.type) || '';
+});
 
 db.ref('upcoming').on('value', snap => {
   const data = snap.val() || {};

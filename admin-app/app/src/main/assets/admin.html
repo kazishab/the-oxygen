@@ -92,6 +92,7 @@
       <button class="tab-btn active" onclick="switchTab('trees')">রোপিত গাছ</button>
       <button class="tab-btn" onclick="switchTab('upcoming')">শীঘ্রই লাগবে</button>
       <button class="tab-btn" onclick="switchTab('donations')">অনুদান</button>
+      <button class="tab-btn" onclick="switchTab('settings')">সেটিংস</button>
     </div>
 
     <!-- TREES -->
@@ -145,6 +146,29 @@
       <h3 style="margin-top:24px;">কনফার্ম করা অনুদান</h3>
       <div id="donationsConfirmed"></div>
     </div>
+
+    <!-- SETTINGS -->
+    <div class="panel" id="panel-settings">
+      <div class="form-card">
+        <h3 style="margin-top:0;">অনুদানের পেমেন্ট নম্বর</h3>
+        <p style="font-size:13px;color:var(--soil);">এখানে যা বসাবেন, পাবলিক ওয়েবসাইটের "অনুদান করুন" পেজে ঠিক তাই দেখানো হবে।</p>
+
+        <div class="row2">
+          <div class="field"><label>bKash নম্বর</label><input id="setBkashNum" placeholder="01XXXXXXXXX"></div>
+          <div class="field"><label>bKash টাইপ</label>
+            <select id="setBkashType"><option value="Personal">Personal</option><option value="Agent">Agent</option></select>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field"><label>Nagad নম্বর</label><input id="setNagadNum" placeholder="01XXXXXXXXX"></div>
+          <div class="field"><label>Nagad টাইপ</label>
+            <select id="setNagadType"><option value="Personal">Personal</option><option value="Agent">Agent</option></select>
+          </div>
+        </div>
+        <div class="err" id="setErr"></div>
+        <button class="btn" onclick="saveSettings()">সংরক্ষণ করুন</button>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -193,7 +217,9 @@ auth.onAuthStateChanged(user => {
   if(user){
     document.getElementById('loginView').style.display='none';
     document.getElementById('adminView').style.display='block';
-    listenTrees(); listenUpcoming(); listenDonations();
+    migrateDueUpcoming().then(()=>{
+      listenTrees(); listenUpcoming(); listenDonations(); listenSettings();
+    });
   } else {
     document.getElementById('loginView').style.display='block';
     document.getElementById('adminView').style.display='none';
@@ -450,6 +476,52 @@ async function confirmDonation(id){
 async function deleteDonation(id){
   if(!confirm('মুছে ফেলতে চান?')) return;
   await db.ref('donations/'+id).remove();
+}
+
+/* ---------- AUTO-MIGRATE OVERDUE "UPCOMING" ---------- */
+async function migrateDueUpcoming(){
+  try{
+    const snap = await db.ref('upcoming').get();
+    const data = snap.val() || {};
+    const today = new Date().toISOString().slice(0,10);
+    const dueEntries = Object.entries(data).filter(([,r]) => r.plannedDate && r.plannedDate <= today);
+    if(dueEntries.length === 0) return;
+    for(const [id, r] of dueEntries){
+      const newId = db.ref('trees').push().key;
+      await db.ref('trees/'+newId).set({
+        name: r.name, phone: r.phone||'', address: r.address||'',
+        species: '', date: r.plannedDate,
+        photoUrl: null, createdAt: Date.now()
+      });
+      await db.ref('upcoming/'+id).remove();
+    }
+    showToast(dueEntries.length+' টি এন্ট্রি স্বয়ংক্রিয়ভাবে "রোপিত গাছ" তালিকায় সরানো হয়েছে');
+  }catch(e){
+    console.log('migrate error', e);
+  }
+}
+
+/* ---------- SETTINGS (bKash/Nagad) ---------- */
+function listenSettings(){
+  db.ref('settings/payment').on('value', snap => {
+    const s = snap.val() || {};
+    document.getElementById('setBkashNum').value = (s.bkash && s.bkash.number) || '';
+    document.getElementById('setBkashType').value = (s.bkash && s.bkash.type) || 'Personal';
+    document.getElementById('setNagadNum').value = (s.nagad && s.nagad.number) || '';
+    document.getElementById('setNagadType').value = (s.nagad && s.nagad.type) || 'Personal';
+  });
+}
+async function saveSettings(){
+  const payload = {
+    bkash: { number: document.getElementById('setBkashNum').value.trim(), type: document.getElementById('setBkashType').value },
+    nagad: { number: document.getElementById('setNagadNum').value.trim(), type: document.getElementById('setNagadType').value }
+  };
+  try{
+    await db.ref('settings/payment').set(payload);
+    showToast('পেমেন্ট নম্বর সংরক্ষণ হয়েছে');
+  }catch(e){
+    document.getElementById('setErr').textContent = 'সংরক্ষণে সমস্যা হয়েছে';
+  }
 }
 </script>
 </body>
