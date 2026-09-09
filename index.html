@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Oxygen — বৃক্ষ রোপণ কর্মসূচি</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1F3D2B">
+<link rel="icon" href="logo.png">
+<link rel="apple-touch-icon" href="logo-192.png">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7392235471119925" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -68,6 +72,8 @@
   .success-box{background:#E7F2E1;border:1px solid #B7D6A8;border-radius:10px;padding:14px;color:#2D5A20;font-size:14px;margin-bottom:14px;display:none;}
 
   .footer-credit{text-align:center;font-size:11px;color:#a89f88;padding:10px 0 24px;}
+  .brand-badge{position:fixed;right:10px;bottom:10px;z-index:99;font-size:10px;color:#7d7a6c;background:rgba(255,253,247,.9);border:1px solid var(--line);padding:4px 9px;border-radius:12px;display:flex;align-items:center;gap:5px;box-shadow:0 2px 6px rgba(31,61,43,.08);}
+  .brand-badge img{width:14px;height:14px;border-radius:3px;}
 </style>
 </head>
 <body>
@@ -147,6 +153,7 @@
 </div>
 
 <div class="footer-credit">The Oxygen</div>
+<div class="brand-badge"><img src="hatech-logo.png" alt="HA TECH BD">Built by HA TECH BD</div>
 
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
@@ -249,6 +256,13 @@ async function submitDonation(){
   }catch(e){
     err.textContent = 'পাঠাতে সমস্যা হয়েছে, আবার চেষ্টা করুন';
   }
+}
+</script>
+<script>
+if('serviceWorker' in navigator){
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(()=>{});
+  });
 }
 </script>
 </body>
