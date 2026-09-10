@@ -144,7 +144,31 @@
         </div>
         <div class="field"><label>ট্রানজেকশন আইডি *</label><input id="dTx" placeholder="যেমন: 9F3G7H2K"></div>
       </div>
-      <div class="field"><label>আপনার মোবাইল নম্বর *</label><input id="dPhone" placeholder="01XXXXXXXXX"></div>
+      <div class="field"><label>আপনার মোবাইল নম্বর (WhatsApp) *</label>
+        <div class="row2" style="grid-template-columns:110px 1fr;">
+          <select id="dCountryCode">
+            <option value="+880" selected>🇧🇩 +880</option>
+            <option value="+91">🇮🇳 +91</option>
+            <option value="+966">🇸🇦 +966</option>
+            <option value="+971">🇦🇪 +971</option>
+            <option value="+974">🇶🇦 +974</option>
+            <option value="+973">🇧🇭 +973</option>
+            <option value="+965">🇰🇼 +965</option>
+            <option value="+968">🇴🇲 +968</option>
+            <option value="+60">🇲🇾 +60</option>
+            <option value="+65">🇸🇬 +65</option>
+            <option value="+44">🇬🇧 +44</option>
+            <option value="+1">🇺🇸/🇨🇦 +1</option>
+            <option value="+61">🇦🇺 +61</option>
+            <option value="+49">🇩🇪 +49</option>
+            <option value="+39">🇮🇹 +39</option>
+            <option value="+33">🇫🇷 +33</option>
+            <option value="+81">🇯🇵 +81</option>
+            <option value="+82">🇰🇷 +82</option>
+          </select>
+          <input id="dPhone" placeholder="1XXXXXXXXX (কান্ট্রি কোড ছাড়া, শুরুর ০ ছাড়া)">
+        </div>
+      </div>
       <div class="err" id="dErr"></div>
       <button class="btn" onclick="submitDonation()">জমা দিন</button>
     </div>
@@ -237,12 +261,14 @@ async function submitDonation(){
   const donorName = document.getElementById('dName').value.trim();
   const method = document.getElementById('dMethod').value;
   const transactionId = document.getElementById('dTx').value.trim();
-  const phone = document.getElementById('dPhone').value.trim();
+  const countryCode = document.getElementById('dCountryCode').value;
+  const localNumber = document.getElementById('dPhone').value.trim().replace(/^0+/, '').replace(/[^0-9]/g,'');
   const err = document.getElementById('dErr');
-  if(!donorName || !transactionId || !phone){
+  if(!donorName || !transactionId || !localNumber){
     err.textContent = 'নাম, ট্রানজেকশন আইডি ও মোবাইল নম্বর আবশ্যক';
     return;
   }
+  const phone = countryCode + localNumber;
   err.textContent = '';
   try{
     const id = db.ref('donations').push().key;

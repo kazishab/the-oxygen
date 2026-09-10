@@ -431,10 +431,9 @@ function switchTabProgrammatic(tab){
 /* ---------- DONATIONS ---------- */
 let donationsCache = {};
 function waLink(phone, message){
-  let p = (phone||'').replace(/[^0-9]/g,'');
-  if(p.startsWith('0')) p = '880' + p.slice(1);
-  else if(p.startsWith('880')) { /* already fine */ }
-  else if(!p.startsWith('880')) p = '880' + p;
+  // ফোন নম্বর এখন পাবলিক ফর্ম থেকে কান্ট্রি কোডসহ (যেমন +8801..., +9665...) সংরক্ষিত হয়,
+  // তাই এখানে শুধু '+' আর অ-সংখ্যা বাদ দিলেই সঠিক আন্তর্জাতিক ফরম্যাট পাওয়া যায়।
+  const p = (phone||'').replace(/[^0-9]/g,'');
   return 'https://wa.me/' + p + '?text=' + encodeURIComponent(message);
 }
 function confirmMessage(r){
